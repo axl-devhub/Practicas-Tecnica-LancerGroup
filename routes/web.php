@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Books');
-})->name('home');
+Route::get('/', [BookController::class, 'index'])->name('home');
+Route::resource('books', BookController::class);
 
 Route::resource('authors', AuthorController::class);

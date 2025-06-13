@@ -8,7 +8,7 @@ import { Head, router } from '@inertiajs/vue3';
 import { Edit, Eye, Plus, Trash2 } from 'lucide-vue-next';
 import { ref } from 'vue';
 
-interface Author {
+export interface Author {
     id: number;
     name: string;
     lastName: string;
